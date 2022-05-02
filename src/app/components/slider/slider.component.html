@@ -1,25 +1,26 @@
+<!-- <pre>{{items | json}}</pre> -->
 <div class="slider">
-    <div class="slide">
-        <div class="slide-bg">
-            <img class="slide-image" src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.svg"
-                alt="slider-image">
-        </div>
-        <div class="slide-pane">
-            <h2 class="name">The Addams Family 2</h2>
-            <div class="meta">
-                <div class="info">
-                    <span class="rating">
-                        <span>*</span>
-                        <span class="rating-value">7.0 / 10</span> |
-                        <span>1099 Reviews</span> |
-                        <span>2021</span>
-                    </span>
+    <ng-container *ngFor="let item of items;let i=index;">
+        <div class="slide" *ngIf="i == currentSlideIndex" @slidefade>
+            <div class="slide-bg">
+                <img class="slide-image" [src]="'https://image.tmdb.org/t/p/original/'+ item.backdrop_path" alt="slider-image">
                 </div>
-            </div>
-            <div class="desc mt-3">
-                "Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and
-                dangerous alternate realities of the Multiverse to confront a mysterious new adversary."
-            </div>
-        </div>
-    </div>
+                <div class="slide-pane">
+                <h2 class="name">{{item.title}}</h2>
+                <div class="meta">
+                    <div class="info">
+                        <span class="rating">
+                            <span class="app-icons">star</span>
+                            <span class="rating-value">{{item.vote_average}}</span>/ 10 |
+                            <span class="reviews"> {{item.vote_count}} Reviews</span> |
+                            <span class="release-yr">{{item.release_date | date: 'yyyy'}}</span>
+                            </span>
+                            </div>
+                            </div>
+                            <div class="desc mt-3">
+                    {{item.overview}}
+                    </div>
+                    </div>
+                    </div>
+    </ng-container>
 </div>
