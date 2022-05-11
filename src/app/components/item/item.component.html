@@ -1,4 +1,4 @@
-<a class="movie-item" *ngIf="itemData">
+<a class="movie-item" *ngIf="itemData" [routerLink]="'/movie/'+itemData.id">
     <div class="movie-item-rating">
         <i class="app-icons">star</i>
         <span>{{itemData.vote_average}}</span>/10
