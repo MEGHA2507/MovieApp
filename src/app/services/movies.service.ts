@@ -1,4 +1,4 @@
-import { MovieDto } from './../models/movie';
+import { Movie, MovieDto } from './../models/movie';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { switchMap } from 'rxjs/operators';
@@ -21,6 +21,11 @@ export class MoviesService {
     ).pipe(switchMap(res => {
       return of(res.results.slice(0, count));
     }));
+  }
+
+  getMovie(id: string){
+    return this.http.get<Movie>(
+      `${this.baseUrl}/movie/${id}?api_key=${this.apiKey}`)
   }
 
   searchMovies(page:number){
