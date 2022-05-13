@@ -16,6 +16,8 @@ import { PaginatorModule } from 'primeng/paginator';
 import { MovieComponent } from './pages/movie/movie.component';
 import { TabViewModule } from 'primeng/tabview';
 import { MovieOverviewComponent } from './pages/movie/movie-overview/movie-overview.component';
+import { MovieVideosComponent } from './pages/movie/movie-videos/movie-videos.component';
+import { MoviePhotosComponent } from './pages/movie/movie-photos/movie-photos.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { MovieOverviewComponent } from './pages/movie/movie-overview/movie-overv
     ItemsBannersComponent,
     ItemComponent,
     MovieComponent,
-    MovieOverviewComponent
+    MovieOverviewComponent,
+    MovieVideosComponent,
+    MoviePhotosComponent
   ],
   imports: [
     BrowserModule,

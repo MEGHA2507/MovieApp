@@ -2,13 +2,13 @@
     <app-slider [items]="[movie]" [isBanner]="true"></app-slider>
     <p-tabView styleClass=" ">
         <p-tabPanel header="Overview">
-            Content 1
+            <app-movie-overview></app-movie-overview>
         </p-tabPanel>
         <p-tabPanel header="Videos">
-            Content 2
+            <app-movie-videos></app-movie-videos>
         </p-tabPanel>
         <p-tabPanel header="Photos">
-            Content 3
+            <app-movie-photos></app-movie-photos>
         </p-tabPanel>
     </p-tabView>
 </ng-container>
