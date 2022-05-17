@@ -2,7 +2,7 @@
     <app-slider [items]="[movie]" [isBanner]="true"></app-slider>
     <p-tabView styleClass=" ">
         <p-tabPanel header="Overview">
-            <app-movie-overview></app-movie-overview>
+            <app-movie-overview [movie]="movie"></app-movie-overview>
         </p-tabPanel>
         <p-tabPanel header="Videos">
             <app-movie-videos></app-movie-videos>

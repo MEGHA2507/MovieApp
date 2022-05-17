@@ -12,7 +12,9 @@ export interface Movie{
     title: string,
     video: false,
     vote_average: number,
-    vote_count: number
+    vote_count: number,
+    revenue: number,
+    genre: Genre[]
 }
 
 export interface MovieDto{
@@ -20,4 +22,9 @@ export interface MovieDto{
     results: Movie[],
     total_results: number,
     total_pages: number
+}
+
+export interface Genre{
+    id: number;
+    name: string;
 }
