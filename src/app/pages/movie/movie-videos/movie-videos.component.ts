@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-movie-videos',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieVideosComponent implements OnInit {
 
-  constructor() { }
+  @Input() videosData: any;
+  @Input() site: string = "YouTube";
+  @Input() key: string | null = null;
+
+  constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
+    console.log(this.videosData);
+    
+  }
+
+  getSafeUrl(url: string){
+      return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
 }
