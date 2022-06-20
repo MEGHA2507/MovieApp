@@ -18,6 +18,7 @@ import { TabViewModule } from 'primeng/tabview';
 import { MovieOverviewComponent } from './pages/movie/movie-overview/movie-overview.component';
 import { MovieVideosComponent } from './pages/movie/movie-videos/movie-videos.component';
 import { MoviePhotosComponent } from './pages/movie/movie-photos/movie-photos.component';
+import {ImageModule} from 'primeng/image';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { MoviePhotosComponent } from './pages/movie/movie-photos/movie-photos.co
     HttpClientModule,
     PaginatorModule,
     TabViewModule,
+    ImageModule,
     BrowserAnimationsModule
   ],
   providers: [],
