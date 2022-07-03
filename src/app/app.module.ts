@@ -19,6 +19,8 @@ import { MovieOverviewComponent } from './pages/movie/movie-overview/movie-overv
 import { MovieVideosComponent } from './pages/movie/movie-videos/movie-videos.component';
 import { MoviePhotosComponent } from './pages/movie/movie-photos/movie-photos.component';
 import {ImageModule} from 'primeng/image';
+import {CarouselModule} from 'primeng/carousel';
+
 
 @NgModule({
   declarations: [
@@ -42,6 +44,7 @@ import {ImageModule} from 'primeng/image';
     PaginatorModule,
     TabViewModule,
     ImageModule,
+    CarouselModule,
     BrowserAnimationsModule
   ],
   providers: [],
