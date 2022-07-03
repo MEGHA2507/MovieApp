@@ -15,12 +15,13 @@
             </div>
         </p-tabPanel>
         <p-tabPanel header="Photos">
-            <ng-container *ngFor="let movieImage of movieImages?.backdrops">
-                <div class="col-12 md:col-4 lg:col-4">
-                    <app-movie-photos></app-movie-photos>
-                </div>
-                
+            <div class="grid">
+                <ng-container *ngFor="let movieImage of movieImages?.backdrops">
+                    <div class="col-12 md:col-4 lg:col-4">
+                        <app-movie-photos [movieImage]="movieImage"></app-movie-photos>
+                        </div>
                 </ng-container>
+            </div>
         </p-tabPanel>
     </p-tabView>
 </ng-container>

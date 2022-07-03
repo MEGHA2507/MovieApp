@@ -23,6 +23,7 @@ export class MovieComponent implements OnInit {
       console.log(id);
       this.getMovieDetails(id);
       this.getMovieVideos(id);
+      this.getMovieImages(id);
     })
   }
 
