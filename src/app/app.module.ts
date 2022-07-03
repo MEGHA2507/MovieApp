@@ -21,7 +21,7 @@ import { MoviePhotosComponent } from './pages/movie/movie-photos/movie-photos.co
 import {ImageModule} from 'primeng/image';
 import {CarouselModule} from 'primeng/carousel';
 import { GenresComponent } from './pages/genres/genres.component';
-
+import {InputTextModule} from 'primeng/inputtext';
 
 @NgModule({
   declarations: [
@@ -47,6 +47,7 @@ import { GenresComponent } from './pages/genres/genres.component';
     TabViewModule,
     ImageModule,
     CarouselModule,
+    InputTextModule,
     BrowserAnimationsModule
   ],
   providers: [],
