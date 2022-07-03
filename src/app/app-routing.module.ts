@@ -1,3 +1,4 @@
+import { GenresComponent } from './pages/genres/genres.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,12 @@ const routes: Routes = [
   },
   {
     path: 'movie/:id', component: MovieComponent
+  },
+  {
+    path: 'genres', component: GenresComponent
+  },
+  {
+    path: 'movies/genres/:genreId', component: MoviesComponent
   },
   {
     path:'**',

@@ -20,6 +20,7 @@ import { MovieVideosComponent } from './pages/movie/movie-videos/movie-videos.co
 import { MoviePhotosComponent } from './pages/movie/movie-photos/movie-photos.component';
 import {ImageModule} from 'primeng/image';
 import {CarouselModule} from 'primeng/carousel';
+import { GenresComponent } from './pages/genres/genres.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {CarouselModule} from 'primeng/carousel';
     MovieComponent,
     MovieOverviewComponent,
     MovieVideosComponent,
-    MoviePhotosComponent
+    MoviePhotosComponent,
+    GenresComponent
   ],
   imports: [
     BrowserModule,
